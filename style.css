@@ -32,12 +32,9 @@ body {
     text-align: center;
 }
 
-.text--large {
+.weather__temp {
     font-size: 3rem;
     font-weight: 100;
-}
-
-.color-pop {
     color: burlywood;
 }
 
