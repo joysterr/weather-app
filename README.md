@@ -16,7 +16,7 @@ To test this out yourself or build upon it:
 - Vite
 - JavaScript
 - Fetch API
-- Weather data from OpenWeather API
+- OpenWeather API
 - Plain old HTML and CSS
 
 ## 🔮 Future Plans
