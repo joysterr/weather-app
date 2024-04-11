@@ -1,4 +1,4 @@
-const url = import.meta.env.VITE_API
+const url = import.meta.env.VITE_API || process.env.VITE_API
 
 function getWeatherData() {
     fetch(url)
