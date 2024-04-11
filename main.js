@@ -9,8 +9,18 @@ function getWeatherData() {
 
 function renderWeatherData(data) {
     console.log(data)
+    let location = document.querySelector('#location')
+    let temp = document.querySelector('#temp')
     let weather = document.querySelector('#weather')
-    weather.innerHTML = data.main.temp
+
+    location.innerHTML = data.name
+    temp.innerHTML = Math.round(data.main.temp)
+    weather.innerHTML = data.weather[0].main
+
 }
 
-// getWeatherData()
+getWeatherData()
+
+setInterval(() => {
+    getWeatherData()
+}, 1000 * 60 * 60)

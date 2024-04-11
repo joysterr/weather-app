@@ -13,10 +13,38 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    min-width: 320px;
+    min-height: 100dvh;
     margin: 0;
     display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.text--large {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.color-pop {
+    color: burlywood;
+}
+
+#temp::after {
+    content: "\00B0 C";
+}
+
+#location {
+    text-transform: uppercase;
 }
