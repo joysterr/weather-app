@@ -30,16 +30,17 @@ function updateWeather(url) {
 
 // init
 function init() {
+    const apiKey = import.meta.env.VITE_API_KEY || process.env.VITE_API_KEY
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(position => {
             const userLocation = [position.coords.latitude, position.coords.longitude]
-            const customURL = `https://api.openweathermap.org/data/2.5/weather?lat=${userLocation[0]}&lon=${userLocation[1]}&appid=${import.meta.env.VITE_API_KEY || process.env.VITE_API_KEY}`
-            
+            const customURL = `https://api.openweathermap.org/data/2.5/weather?lat=${userLocation[0]}&lon=${userLocation[1]}&appid=${apiKey}`
+
             getWeatherData(customURL)
             updateWeather(customURL)
         })
     } else {
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${import.meta.env.VITE_API_KEY || process.env.VITE_API_KEY}`
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}`
         getWeatherData(url)
         updateWeather(url)
     }
